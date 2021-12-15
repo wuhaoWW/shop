@@ -9,9 +9,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-/**
- * Created by 文辉 on 2017/7/23.
- */
+
 @Service("cateService")
 public class CateServiceImpl implements CateService {
 

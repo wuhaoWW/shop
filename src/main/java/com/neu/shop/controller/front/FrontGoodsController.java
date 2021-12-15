@@ -17,9 +17,7 @@ import javax.servlet.http.HttpSession;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-/**
- * Created by 文辉 on 2017/7/24.
- */
+
 @Controller
 public class FrontGoodsController {
 

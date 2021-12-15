@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: 蒋松冬
-  Date: 2017/7/22
-  Time: 9:50
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%--<%@ page contentType="text/html;charset=UTF-8" language="java" %>--%>
 <%@page import="com.neu.shop.util.verificate.Verificate" %>

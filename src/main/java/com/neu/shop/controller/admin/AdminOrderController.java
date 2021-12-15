@@ -15,9 +15,7 @@ import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by 文辉 on 2017/7/26.
- */
+
 @Controller
 @RequestMapping("/admin/order")
 public class AdminOrderController {
@@ -62,10 +60,7 @@ public class AdminOrderController {
                 goodsList.add(goods);
             }
 
-            //根据goodsid查询商品
-            /*GoodsExample goodsExample = new GoodsExample();
-            goodsExample.or().andGoodsidIn(goodsIdList);
-            List<Goods> goodsList = goodsService.selectByExample(goodsExample);*/
+
             order.setGoodsInfo(goodsList);
 
             //查询地址
@@ -129,10 +124,7 @@ public class AdminOrderController {
                 goods.setNum(orderItem.getNum());
                 goodsList.add(goods);
             }
-            //根据goodsid查询商品
-           /* GoodsExample goodsExample = new GoodsExample();
-            goodsExample.or().andGoodsidIn(goodsIdList);
-            List<Goods> goodsList = goodsService.selectByExample(goodsExample);*/
+
             order.setGoodsInfo(goodsList);
 
             //查询地址
@@ -172,9 +164,6 @@ public class AdminOrderController {
             orderItemExample.or().andOrderidEqualTo(order.getOrderid());
             List<OrderItem> orderItemList = orderService.getOrderItemByExample(orderItemExample);
             List<Integer> goodsIdList = new ArrayList<>();
-            /*for (OrderItem orderItem : orderItemList) {
-                goodsIdList.add(orderItem.getGoodsid());
-            }*/
 
             List<Goods> goodsList = new ArrayList<>();
             for (OrderItem orderItem : orderItemList) {
@@ -184,10 +173,7 @@ public class AdminOrderController {
                 goodsList.add(goods);
             }
 
-            //根据goodsid查询商品
-            /*GoodsExample goodsExample = new GoodsExample();
-            goodsExample.or().andGoodsidIn(goodsIdList);
-            List<Goods> goodsList = goodsService.selectByExample(goodsExample);*/
+      
             order.setGoodsInfo(goodsList);
 
             //查询地址

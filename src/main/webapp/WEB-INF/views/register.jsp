@@ -1,10 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: 蒋松冬
-  Date: 2017/7/23
-  Time: 20:50
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@page import="java.security.interfaces.RSAKey"%>
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%request.setCharacterEncoding("utf-8");%>

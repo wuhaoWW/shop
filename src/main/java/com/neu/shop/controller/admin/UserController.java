@@ -12,9 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
-/**
- * Created by 文辉 on 2017/7/22.
- */
+
 @Controller
 @RequestMapping("/admin/user")
 public class UserController {

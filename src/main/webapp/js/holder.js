@@ -1,14 +1,4 @@
-/*!
 
-Holder - client side image placeholders
-Version 2.9.0+f2dkw
-© 2015 Ivan Malopinsky - http://imsky.co
-
-Site:     http://holderjs.com
-Issues:   https://github.com/imsky/holder/issues
-License:  MIT
-
-*/
 (function (window) {
   if (!window.document) return;
   var document = window.document;

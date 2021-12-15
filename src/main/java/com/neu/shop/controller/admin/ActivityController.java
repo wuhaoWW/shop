@@ -15,9 +15,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.servlet.http.HttpSession;
 import java.util.List;
 
-/**
- * Created by 文辉 on 2017/7/27.
- */
 @Controller
 @RequestMapping("/admin/activity")
 public class ActivityController {
