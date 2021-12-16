@@ -1,26 +1,39 @@
 package com.neu.shop.controller.admin;
 
-import com.github.pagehelper.PageHelper;
-import com.github.pagehelper.PageInfo;
-import com.neu.shop.pojo.*;
-import com.neu.shop.service.CateService;
-import com.neu.shop.service.GoodsService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.multipart.MultipartHttpServletRequest;
-import org.springframework.web.multipart.commons.CommonsMultipartResolver;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.UUID;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import java.io.File;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.*;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
+import com.neu.shop.pojo.Admin;
+import com.neu.shop.pojo.Category;
+import com.neu.shop.pojo.CategoryExample;
+import com.neu.shop.pojo.Goods;
+import com.neu.shop.pojo.GoodsExample;
+import com.neu.shop.pojo.ImagePath;
+import com.neu.shop.pojo.Msg;
+import com.neu.shop.service.CateService;
+import com.neu.shop.service.GoodsService;
 
 
 
@@ -119,12 +132,12 @@ public class GoodsController {
             if (multipartFile != null){
 
                 String realPath = request.getSession().getServletContext().getRealPath("/");
-
+                System.out.println(realPath);
                 //图片路径=项目在本地磁盘的路径\shop\target\shop\shopimage
                 String imageName = UUID.randomUUID().toString().replace("-", "") + multipartFile.getOriginalFilename();
-                String imagePath = realPath.substring(0,realPath.indexOf("shop")) + "shopimage" + File.separatorChar + imageName;
-//                String imagePath = realPath + "shopimage\\" + imageName;
+                String imagePath = realPath.substring(0,realPath.indexOf("shop")) + "shop\\shopimage" + File.separatorChar + imageName;
 
+                System.out.println(imagePath);
 
                 //把图片路径存入数据库中
                 goodsService.addImagePath(new ImagePath(null, goods.getGoodsid(),imageName));

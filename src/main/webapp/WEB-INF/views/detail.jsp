@@ -72,21 +72,7 @@
 
             });
 
-            /*$("#chatto").click(function () {
-                $.ajax({
-                    url: "/shop/chat/", //把表单数据发送到ajax.jsp
-                    type: "POST",
-                    data: {
-                        sendto: 5
-                    },
-                    error: function (request) {
-                        alert(result.msg);
-                    },
-                    success: function (result) {
-                    }
-                });
-            });*/
-
+           
             $('.fav-button').click(function(){
                 //$(this).removeClass("glyphicon-heart-empty");
                 var goodsId = $(this).attr('data-id');
@@ -182,7 +168,7 @@
                     <div id="leftbox">
                         <div id="showbox">
                             <c:forEach items="${goodsInfo['image']}" var="path">
-                                <img src="/shopimage/${path.path}" width="400" height="400"/>
+                                <img src="/shop/shopimage/${path.path}" width="400" height="400"/>
                             </c:forEach>
                         </div>
                         <div id="showsum">
@@ -268,12 +254,13 @@
                     <%--<div class="new_meta"></div>--%>
 
                     <div class="rel-div">
+                    <%--  
                         <div class="add_defi new_meta">
                             <a id="chatto" href="${pageContext.request.contextPath}/chat?sendto=5" data-original-title="Add to Wishlist" data-toggle="tooltip" class=" big-font">
                                 <i class="fa fa-commenting"></i>
                                 联系客服
                             </a>
-                        </div>
+                        </div>--%>
                         <form class="cart-btn-area new_meta" action="${pageContext.request.contextPath}/addCart" method="post">
                             <input type="hidden" value="${goodsInfo['goods'].goodsid}" name="goodsid"/>
                             <input type="number" value="1" name="goodsnum">

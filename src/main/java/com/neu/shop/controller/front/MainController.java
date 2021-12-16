@@ -7,8 +7,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpSession;
+import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -91,6 +93,7 @@ public class MainController {
 
             List<ImagePath> imagePathList = goodsService.findImagePath(goods.getGoodsid());
             goods.setImagePaths(imagePathList);
+            //存图片
             goodsAndImage.add(goods);
         }
         return goodsAndImage;

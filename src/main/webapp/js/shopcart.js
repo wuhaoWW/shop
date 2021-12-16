@@ -120,7 +120,7 @@ function build_cart_table(result) {
 
             var shopimage = $("<td></td>").addClass("product-thumbnail product-thumbnail-2")
                 .append($("<a></a>").attr("href","/shop/detail?goodsid="+item.goodsid)
-                    .append($("<img/>").attr("src","/shopimage/"+item.imagePaths[0].path)));
+                    .append($("<img/>").attr("src","/shop/shopimage/"+item.imagePaths[0].path)));
 
             var goodsname = $("<td></td>").addClass("product-name product-name_2")
                 .append($("<a></a>").attr("href","/shop/detail?goodsid="+item.goodsid).append(item.goodsname));

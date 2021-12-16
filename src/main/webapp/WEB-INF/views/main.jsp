@@ -377,7 +377,7 @@
                             <c:forEach items="${digGoods}" var="goods">
                                 <li class="data-item-li">
                                     <div class="to-big">
-                                        <a href="${pageContext.request.contextPath}/detail?goodsid=${goods.goodsid}"><img src="/shopimage/${goods.imagePaths[0].path}" alt=""
+                                        <a href="${pageContext.request.contextPath}/detail?goodsid=${goods.goodsid}"><img src="/shop/shopimage/${goods.imagePaths[0].path}" alt=""
                                                         width="200" height="200"/>
                                         </a>
                                     </div>
@@ -427,7 +427,7 @@
                                 <li class="data-item-li">
                                     <div class="to-big">
                                         <a href="${pageContext.request.contextPath}/detail?goodsid=${housegoods.goodsid}"> <img
-                                                src="/shopimage/${housegoods.imagePaths[0].path}" alt=""
+                                                src="/shop/shopimage/${housegoods.imagePaths[0].path}" alt=""
                                                 width="200" height="200">
                                         </a>
                                     </div>
@@ -477,7 +477,7 @@
                                 <li class="data-item-li">
                                     <div class="to-big">
                                         <a href="${pageContext.request.contextPath}/detail?goodsid=${colgoods.goodsid}"> <img
-                                                src="/shopimage/${colgoods.imagePaths[0].path}" alt=""
+                                                src="/shop/shopimage/${colgoods.imagePaths[0].path}" alt=""
                                                 width="200" height="200">
                                         </a>
                                     </div>
@@ -526,7 +526,7 @@
                                 <li class="data-item-li">
                                     <div class="to-big">
                                         <a href="${pageContext.request.contextPath}/detail?goodsid=${bookgoods.goodsid}"> <img
-                                                src="/shopimage/${bookgoods.imagePaths[0].path}" alt=""
+                                                src="/shop/shopimage/${bookgoods.imagePaths[0].path}" alt=""
                                                 width="200" height="200">
                                         </a>
                                     </div>
